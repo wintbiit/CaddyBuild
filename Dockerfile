@@ -1,4 +1,4 @@
-ARG CADDY_VERSION="v2.7.6"
+ARG CADDY_VERSION="v2.8.4"
 
 FROM golang:1.22-alpine AS builder
 ARG CADDY_VERSION
@@ -17,7 +17,7 @@ RUN xcaddy build \
     --with github.com/caddy-dns/cloudflare \
     --with github.com/greenpau/caddy-security \
     --with github.com/yroc92/postgres-storage \
-    --with github.com/42wim/caddy-gitea \
+    --with github.com/d7z-project/caddy-gitea-pages \
     --output /builder/bin/caddy
 
 FROM alpine:3.14
