@@ -18,6 +18,7 @@ RUN xcaddy build \
     --with github.com/greenpau/caddy-security \
     --with github.com/yroc92/postgres-storage \
     --with github.com/d7z-project/caddy-gitea-pages \
+    --with github.com/mholt/caddy-grpc-web \
     --output /builder/bin/caddy
 
 FROM alpine:3.14
